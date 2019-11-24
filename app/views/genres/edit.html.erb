@@ -1,0 +1,11 @@
+<h1>Editing <%= @genre.name %></h1>
+
+<%= form_for @genre do |f| %>
+	<div style="padding-bottom: 10px;">
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	<div style="padding-bottom: 10px;">
+		<%= f.submit "Update Genre"%>
+	</div>
+<% end %>

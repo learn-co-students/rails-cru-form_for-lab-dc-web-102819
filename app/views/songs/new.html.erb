@@ -1,0 +1,19 @@
+<h1>New Song</h1>
+
+<%= form_for @song do |f| %>
+	<div style="padding-bottom: 10px;">
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	<div style="padding-bottom: 10px;">
+		<%= f.label :artist, "Artist" %>
+		<%= f.text_area :artist %>
+	</div>
+	<div style="padding-bottom: 10px;">
+		<%= f.label :genre, "Genre" %>
+		<%= f.text_area :genre %>
+	</div>
+	<div style="padding-bottom: 10px;">
+		<%= f.submit %>
+	</div>
+<% end %>

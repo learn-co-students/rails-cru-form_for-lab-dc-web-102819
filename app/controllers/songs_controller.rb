@@ -17,7 +17,7 @@ class SongsController < ApplicationController
 		# song.genre_id = Genre.find_or_create_by(:strong_params(:genre))
 		# song.artist_id = Artist.find_or_create_by(:strong_params(:artist))
 		song = Song.create(strong_params(:name, :genre_id, :artist_id))
-		redirect_to song_path(artist)
+		redirect_to song_path(song)
 	end
 
 	def edit
@@ -27,7 +27,7 @@ class SongsController < ApplicationController
 	def update
 		song = Song.find(params[:id])
 		song.update(strong_params(:name, :artist_id, :genre_id))
-		redirect_to song_path(songs)
+		redirect_to song_path(song)
 	end
 
 	private
